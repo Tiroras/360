@@ -1,0 +1,19 @@
+.bold{
+    font-weight: bold;
+}
+
+.s18{
+    font-size: 18px;
+}
+
+.s22{
+    font-size: 22px;
+}
+
+.max-h-700{
+    max-height: 700px;
+}
+
+a{
+    text-decoration: none;
+}

@@ -1,0 +1,14 @@
+.navbar{
+    font-size: 18px;;
+    padding: 1vh 10vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.usernav{
+    display: flex;
+}
+
+.profile{
+    display: flex;
+}

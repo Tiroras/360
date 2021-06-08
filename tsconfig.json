@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "target": "es6",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "commonjs",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
+  },
+  "lib": [
+    "dom",
+    "dom.iterable",
+    "esnext"
+  ],
+  "include": [
+    "client",
+    "routes",
+    "models",
+    "interfaces"
+  ],
+  "files": [
+    "app.ts",
+    "db.ts"
+  ]
+}

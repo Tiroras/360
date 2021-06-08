@@ -1,0 +1,14 @@
+.footer{
+    width: 100%;
+}
+
+.el{
+    margin: auto;
+    min-width: 350px;
+}
+
+.block{
+    padding: 3vh 3vh;
+    display: flex;
+    flex-wrap: wrap;
+}

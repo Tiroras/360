@@ -1,0 +1,19 @@
+.registr{
+    max-width: 450px;
+    margin: 15vh auto;
+}
+
+.input{
+    margin: 1vh 0;
+}
+
+.button{
+    margin-top: 1vh;
+}
+
+.input input{
+    width: 255px;
+    border-radius: 5px;
+    border-color: black;
+    padding: 5px 0.5vw;
+}

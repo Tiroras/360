@@ -1,12 +1,20 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Poll from "./Poll";
-import {useSelector} from "react-redux";
-import {ReducersType} from "../../../../store/store";
-import {TQuestion} from "../../../../interfaces/Polls.types";
+import {useDispatch} from "react-redux";
+import useHttp from "../../../../assets/hooks/http";
+import {setQuestionsAC} from "../../../../store/pools-reducer";
 
 
 const PollContainer = () => {
-  const questions: Array<TQuestion> = useSelector((state: ReducersType) => state.pools.questions);
+  const dispatch = useDispatch();
+  const {error, request} = useHttp();
+
+  useEffect(() => {
+    request('/api/polls/questions', "GET").then((res) => {
+      dispatch(setQuestionsAC(res));
+    }).catch(e => console.log(e));
+  }, []);
+
 
   const handleSubmit = (values: any) => {
     console.log(values)

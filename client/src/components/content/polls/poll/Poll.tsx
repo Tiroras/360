@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {ListGroup} from "react-bootstrap";
 import {Form, reduxForm} from "redux-form";
 import Question from "./Question";
@@ -9,6 +9,10 @@ import {ReducersType} from "../../../../store/store";
 
 const Poll = (props: any) => {
   const questions: Array<TQuestion> = useSelector((state: ReducersType) => state.pools.questions);
+
+  useEffect(() => {
+
+  })
 
   return (
     <Form onSubmit={props.handleSubmit((values: any) => console.log(values))}>

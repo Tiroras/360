@@ -2,9 +2,9 @@ import React from 'react';
 import {Redirect, Route, Switch} from "react-router-dom";
 import Main from "../main/Main";
 import PollsContainer from "../polls/Polls.container";
-import Poll from "../polls/poll/Poll";
 import ProfileContainer from "../profile/Profile.container";
 import Login from "../login/Login";
+import PollContainer from "../polls/poll/Poll.container";
 
 
 interface IProps {
@@ -17,7 +17,7 @@ const UserRouter = (props: IProps) => {
       <Switch>
         <Route render={() => <Main /> } path='/' exact/>
         <Route render={() => <PollsContainer /> } path='/polls' exact/>
-        <Route render={() => <Poll />} path={'/poll/:pollId?'} />
+        <Route render={() => <PollContainer />} path={'/poll/:pollId?'} />
         <Route render={() => <ProfileContainer /> } path='/profile' exact/>
         <Redirect to={"/"} />
       </Switch>
@@ -28,7 +28,6 @@ const UserRouter = (props: IProps) => {
     <Switch>
       <Route render={() => <Main /> } path='/' exact/>
       <Route render={() => <PollsContainer /> } path='/polls' exact/>
-      <Route render={() => <Poll />} path={'/poll/:pollId?'} />
       <Route render={() => <Login /> } path='/login' exact />
       <Redirect to={"/"} />
     </Switch>

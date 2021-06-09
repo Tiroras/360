@@ -10,6 +10,14 @@ const Users = (props) => {
       <div>
         <h3>Список пользователй</h3>
       </div>
+      <ListGroup horizontal>
+        <ListGroup.Item>id пользователя</ListGroup.Item>
+        <ListGroup.Item>ФИО пользователя</ListGroup.Item>
+        <ListGroup.Item>Должность пользователя</ListGroup.Item>
+        <ListGroup.Item>Это админ</ListGroup.Item>
+        <ListGroup.Item>Логин пользователя</ListGroup.Item>
+        <ListGroup.Item>Почта пользователя</ListGroup.Item>
+      </ListGroup>
       <ListGroup>
         {props.users.map((user: IUserInfo) => (
           <User

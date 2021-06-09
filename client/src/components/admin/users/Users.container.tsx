@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import Users from "./Users";
 import withClosedAccess from "../../../assets/hocs/ClosedAccess";
 import useHttp from "../../../assets/hooks/http";
-import {IUserInfo} from "../../../interfaces/User.types";
 
 
 const UsersContainer = () => {

@@ -16,6 +16,11 @@ const AdminNav = () => {
           Список пользователей
         </Link>
       </NavDropdown.Item>
+      <NavDropdown.Item>
+        <Link to="/admin/polls">
+          Список опросов
+        </Link>
+      </NavDropdown.Item>
     </NavDropdown>
   )
 }

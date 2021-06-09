@@ -7,5 +7,6 @@ export type TPoll = {
 
 export type TQuestion = {
   id: number;
+  competence_id: number;
   question: string;
 }

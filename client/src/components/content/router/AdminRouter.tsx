@@ -7,6 +7,7 @@ import UsersContainer from "../../admin/users/Users.container";
 import Registration from "../../admin/registration/Registr";
 import PollContainer from "../polls/poll/Poll.container";
 import AdminPollsContainer from "../../admin/polls/Polls.container";
+import AdminAddPollContainer from "../../admin/add-poll/AddPoll.container";
 
 
 const AdminRouter = () => {
@@ -19,6 +20,7 @@ const AdminRouter = () => {
       <Route render={() => <Registration /> } path='/admin/registration' exact />
       <Route render={() => <UsersContainer /> } path='/admin/users' exact />
       <Route render={() => <AdminPollsContainer /> } path='/admin/polls' exact />
+      <Route render={() => <AdminAddPollContainer /> } path='/admin/add-poll' exact />
       <Redirect to={"/"} />
     </Switch>
   )

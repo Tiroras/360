@@ -7,7 +7,7 @@ import {setQuestionsAC} from "../../../../store/pools-reducer";
 
 const PollContainer = () => {
   const dispatch = useDispatch();
-  const {error, request} = useHttp();
+  const {request} = useHttp();
 
   useEffect(() => {
     request('/api/polls/questions', "GET").then((res) => {

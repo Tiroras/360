@@ -1,0 +1,16 @@
+.filter{
+    margin: 1vh 2vw 0 2vw;
+}
+
+.clearFilter {
+    margin: 1vh 2vw 0 2vw;
+}
+
+.search {
+    margin: 1vh 2vw 0 2vw;
+}
+
+.search input{
+    padding: 2px 5px;
+    width: 350px;
+}

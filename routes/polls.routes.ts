@@ -38,6 +38,26 @@ pollsRouter.get("/",
     }
 });
 
+pollsRouter.post("/",
+  async (req: Request, res: Response) => {
+  try {
+    const {users} = req.body;
+    const hasPoll = await Poll.findOne({where: {appraisal_target_id: users, isOver: false}});
+
+    if(hasPoll){
+      return res.status(400).json({
+        message: "Такой опрос уже существует"
+      });
+    }
+    const poll = new Poll({appraisal_target_id: users, isOver: false});
+    await poll.save();
+    res.status(201).json({message: "Опрос создан создан"})
+  } catch (e) {
+    console.log(e);
+    res.status(500).json({message: "Что-то пошло не так"});
+  }
+});
+
 pollsRouter.get("/questions",
   async (req: Request, res: Response) => {
   try {
@@ -48,6 +68,16 @@ pollsRouter.get("/questions",
     console.log(e);
     res.status(500).json({message: "Что-то пошло не так"});
   }
-})
+});
+
+pollsRouter.post("/interviewers",
+  async (req: Request, res: Response) => {
+  try {
+
+  } catch (e) {
+    console.log(e)
+    res.status(500).json({message: "Что-то пошло не так"});
+  }
+});
 
 export default pollsRouter;

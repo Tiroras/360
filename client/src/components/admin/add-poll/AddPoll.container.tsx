@@ -16,8 +16,6 @@ const AdminAddPollContainer = () => {
   }, [])
 
   const usersFilter = () => {
-    console.log(users)
-    console.log(users)
     setUsers(users.filter((user: IUserInfo) => {
       return user.id.toString() === input || user.user_name.includes(input)
         || user.email.includes(input) || user.login.includes(input);

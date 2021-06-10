@@ -39,13 +39,6 @@ const SelectPollContainer = (props: IProps) => {
     }
   }, [props.input]);
 
-  const filterPolls = (data) => {
-    setFilteredPolls(polls.filter((poll: IPoll) => {
-      return poll.id === data || poll.user_name.includes(data) || poll.user_position.includes(data) ||
-        poll.login.includes(data) || poll.email.includes(data);
-    }));
-  }
-
   return(
     <SelectPoll
       input={props.input}

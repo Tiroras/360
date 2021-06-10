@@ -1,5 +1,6 @@
 import React from 'react';
 import {ListGroup, ListGroupItem} from "react-bootstrap";
+import {Field} from "redux-form";
 
 
 interface IPoll {
@@ -14,37 +15,42 @@ interface IPoll {
 
 const SelectPollListItem = (props: IPoll) => {
   return(
-    <ListGroup horizontal>
-      <ListGroupItem>
-        <input
-          type="radio"
-          name="polls"
-          value={props.id}
-          id={`poll-${props.id}`}
-        />
-      </ListGroupItem>
-      <ListGroupItem>
-        {props.id}
-      </ListGroupItem>
-      <ListGroupItem>
-        {props.appraisal_target_id}
-      </ListGroupItem>
-      <ListGroupItem>
-        {props.isOver}
-      </ListGroupItem>
-      <ListGroupItem>
-        {props.user_name}
-      </ListGroupItem>
-      <ListGroupItem>
-        {props.user_position}
-      </ListGroupItem>
-      <ListGroupItem>
-        {props.login}
-      </ListGroupItem>
-      <ListGroupItem>
-        {props.email}
-      </ListGroupItem>
-    </ListGroup>
+    <div>
+      <label htmlFor={`poll-${props.id}`}>
+        <ListGroup horizontal>
+          <ListGroupItem>
+            <Field
+              type="radio"
+              component="input"
+              id={`poll-${props.id}`}
+              value={`${props.id}`}
+              name="polls"
+            />
+          </ListGroupItem>
+          <ListGroupItem>
+            {props.id}
+          </ListGroupItem>
+          <ListGroupItem>
+            {props.appraisal_target_id}
+          </ListGroupItem>
+          <ListGroupItem>
+            {props.isOver}
+          </ListGroupItem>
+          <ListGroupItem>
+            {props.user_name}
+          </ListGroupItem>
+          <ListGroupItem>
+            {props.user_position}
+          </ListGroupItem>
+          <ListGroupItem>
+            {props.login}
+          </ListGroupItem>
+          <ListGroupItem>
+            {props.email}
+          </ListGroupItem>
+        </ListGroup>
+      </label>
+    </div>
   )
 }
 

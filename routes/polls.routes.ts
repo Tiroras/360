@@ -4,6 +4,7 @@ import Question from "../models/Question";
 import Poll from "../models/Poll";
 import User from "../models/User";
 import { Op } from "sequelize";
+import Interviewer from "../models/Interviwer";
 
 
 const pollsRouter: Router = Router();
@@ -71,6 +72,34 @@ pollsRouter.get("/questions",
 pollsRouter.post("/interviewers",
   async (req: Request, res: Response) => {
   try {
+    console.log(req.body)
+    const {polls, userId} = req.body;
+    if(!polls && userId.length === 0){
+      return res.status(400).json({
+        message: "Что-то не так с отправленными данными. Проверьте, выбрали ли вы опрос или пользователей"
+      });
+    }
+
+    const findedInter = await Interviewer.findOne({
+      raw: true,
+      where: {
+        user_id:
+          {
+            [Op.or]: userId
+          },
+        poll_id: polls}
+    });
+
+    if(findedInter){
+      return res.status(400).json({
+        message: "Пользователь уже имеет возможность дать оценку по этому опросу"
+      });
+    }
+
+    userId.map((id) => {
+      const inter = new Interviewer({poll_id: polls, user_id: id, isPassed: false});
+      inter.save();
+    })
 
   } catch (e) {
     console.log(e)

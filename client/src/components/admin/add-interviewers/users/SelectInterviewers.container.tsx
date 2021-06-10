@@ -1,10 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import Users from "./Users";
-import withClosedAccess from "../../../assets/hocs/ClosedAccess";
-import useHttp from "../../../assets/hooks/http";
+import SelectInterviewers from "./SelectInterviewers";
+import useHttp from "../../../../assets/hooks/http";
 
 
-const UsersContainer = () => {
+const SelectInterviewersContainer = () => {
   const [users, setUsers] = useState([]);
   const {request} = useHttp();
 
@@ -16,10 +15,10 @@ const UsersContainer = () => {
   }, [])
 
   return(
-    <Users
+    <SelectInterviewers
       users={users}
     />
   )
 }
 
-export default withClosedAccess(UsersContainer);
+export default SelectInterviewersContainer;

@@ -26,6 +26,11 @@ const AdminNav = () => {
           Выбрать цель опроса
         </Link>
       </NavDropdown.Item>
+      <NavDropdown.Item>
+        <Link to="/admin/add-interviewer">
+          Выбрать проходящих опрос
+        </Link>
+      </NavDropdown.Item>
     </NavDropdown>
   )
 }

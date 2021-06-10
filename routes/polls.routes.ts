@@ -3,7 +3,7 @@ import {Response, Request} from "express";
 import Question from "../models/Question";
 import Poll from "../models/Poll";
 import User from "../models/User";
-import { Op, fn, col } from "sequelize";
+import { Op } from "sequelize";
 
 
 const pollsRouter: Router = Router();
@@ -13,9 +13,8 @@ pollsRouter.get("/",
     try {
       const polls = await Poll.findAll({
         raw: true,
-        order: fn("max", col("appraisal_target_id"))
+        order: ["appraisal_target_id"]
       });
-
       const target_users = await User.findAll({
         raw: true,
         attributes: ["user_name", "user_position", "login", "email"],
@@ -25,11 +24,10 @@ pollsRouter.get("/",
           }
         }
       });
-
-      polls.reduce((polls: any, poll: any, i: number) => {
-        polls.push(Object.assign(poll, target_users[i]))
+      polls.reduce((array: any, poll: any, i: number) => {
+        array.push(Object.assign(poll, target_users[i]));
+        return array;
       }, []);
-
       res.send(polls);
       res.status(201);
     } catch (e) {

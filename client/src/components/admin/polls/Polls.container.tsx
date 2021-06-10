@@ -5,7 +5,7 @@ import useHttp from "../../../assets/hooks/http";
 
 const AdminPollsContainer = () => {
   const [polls, setPolls] = useState([]);
-  const {error, request} = useHttp();
+  const {request} = useHttp();
 
 
   useEffect(() => {

@@ -16,9 +16,9 @@ const PollContainer = () => {
   }, []);
 
 
-  const handleSubmit = (values: any) => {
-    console.log(values)
-  }
+  // const handleSubmit = (values: any) => {
+  //   console.log(values)
+  // }
 
   return(
     <Poll

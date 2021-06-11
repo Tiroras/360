@@ -6,8 +6,10 @@ import {Link} from "react-router-dom";
 
 interface IProps {
   id: number;
+  inter_id: number;
   user_name: string;
   user_position: string;
+  setCurrentPoll: (poll: any) => any;
 }
 
 const PoolLink = (props: IProps) => {
@@ -21,7 +23,13 @@ const PoolLink = (props: IProps) => {
         </div>
         <div>
           <Link to={`/poll/${props.id}`}>
-            <Button variant="warning">Перейти к опросу</Button>
+            <Button
+              variant="warning"
+              onClick={props.setCurrentPoll({
+                poll_id: props.id,
+                inter_id: props.inter_id
+              })}
+            >Перейти к опросу</Button>
           </Link>
         </div>
       </div>

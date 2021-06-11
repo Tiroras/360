@@ -16,7 +16,7 @@ const AnswerOpts = (props: IProps) => {
           component="input"
           id={`${props.id}-1`}
           value="agree"
-          name={`question ${props.id}`}
+          name={`${props.id}`}
         />
       </div>
       <div>
@@ -26,7 +26,7 @@ const AnswerOpts = (props: IProps) => {
           component="input"
           id={`${props.id}-2`}
           value="rather-agree"
-          name={`question ${props.id}`}
+          name={`${props.id}`}
         />
       </div>
       <div>
@@ -38,7 +38,7 @@ const AnswerOpts = (props: IProps) => {
           type="radio"
           id={`${props.id}-3`}
           value="not-sure"
-          name={`question ${props.id}`}
+          name={`${props.id}`}
         />
       </div>
       <div>
@@ -50,7 +50,7 @@ const AnswerOpts = (props: IProps) => {
           type="radio"
           id={`${props.id}-4`}
           value="rather-not-agree"
-          name={`question ${props.id}`}
+          name={`${props.id}`}
         />
       </div>
       <div>
@@ -60,7 +60,7 @@ const AnswerOpts = (props: IProps) => {
           type="radio"
           id={`${props.id}-5`}
           value="not-agree"
-          name={`question ${props.id}`}
+          name={`${props.id}`}
         />
       </div>
     </div>

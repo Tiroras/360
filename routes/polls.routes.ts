@@ -5,6 +5,7 @@ import Poll from "../models/Poll";
 import User from "../models/User";
 import { Op } from "sequelize";
 import Interviewer from "../models/Interviwer";
+import Answer from "../models/Answer";
 
 
 const pollsRouter: Router = Router();
@@ -21,7 +22,7 @@ pollsRouter.post("/",
 
       const interPollId: any = await Interviewer.findAll({
         raw: true,
-        attributes: ["poll_id"],
+        attributes: ["id", "poll_id"],
         where: {
           user_id: userId,
           isPassed: 0
@@ -53,10 +54,9 @@ pollsRouter.post("/",
       });
 
       const resPolls = polls.reduce((array: any, poll: any, i: number) => {
-        array.push({id: poll.id, userInfo: target_users[i]});
+        array.push({id: poll.id, inter_id: interPollId[i].id, userInfo: target_users[i]});
         return array;
       }, []);
-
       res.json(resPolls);
     } catch (e) {
       console.log(e);
@@ -105,7 +105,7 @@ pollsRouter.post("/admin",
     }
     const poll = new Poll({appraisal_target_id: users, isOver: false});
     await poll.save();
-    res.status(201).json({message: "Опрос создан создан"})
+    res.status(201).json({message: "Опрос создан создан"});
   } catch (e) {
     console.log(e);
     res.status(500).json({message: "Что-то пошло не так"});
@@ -127,7 +127,6 @@ pollsRouter.get("/questions",
 pollsRouter.post("/admin/interviewers",
   async (req: Request, res: Response) => {
   try {
-    console.log(req.body)
     const {polls, userId} = req.body;
     if(!polls && userId.length === 0){
       return res.status(400).json({
@@ -157,7 +156,30 @@ pollsRouter.post("/admin/interviewers",
     })
 
   } catch (e) {
-    console.log(e)
+    console.log(e);
+    res.status(500).json({message: "Что-то пошло не так"});
+  }
+});
+
+pollsRouter.post("/answers",
+  async (req: Request, res: Response) => {
+  try {
+    const {answers, poll_id, inter_id} = req.body;
+    answers.shift();
+    answers.map((answ) => {
+      switch (answ) {
+        case "agree": return 1;
+        case "rather-agree": return 2;
+        case "not-sure": return 3;
+        case "rather-not-agree": return 4;
+        case "not-agree": return 5;
+      }
+    }).reduce((array, answ, i) => {
+      console.log({interviewer_id: inter_id, question_id: i+1, answer_variant_id: answ})
+    }, []);
+
+  } catch (e) {
+    console.log(e);
     res.status(500).json({message: "Что-то пошло не так"});
   }
 });

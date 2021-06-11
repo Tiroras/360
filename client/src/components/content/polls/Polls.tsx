@@ -1,9 +1,9 @@
 import React from 'react';
 import {ListGroup, Card} from "react-bootstrap";
-import PoolLink from "./PoolLink";
 import {TPoll} from "../../../interfaces/Polls.types";
 import classes from './Polls.module.css';
 import PollMessage from "./PollMessage";
+import PollLinkContainer from "./PollLink.container";
 
 
 interface IProps {
@@ -22,9 +22,10 @@ const Polls = (props: IProps) => {
           <div className={classes.polls_container}>
             <ListGroup>
               {props.pools.map((prop: TPoll) => (
-                <PoolLink
+                <PollLinkContainer
                   key={prop.id}
                   id={prop.id}
+                  inter_id={prop.inter_id}
                   user_name={prop.userInfo.user_name}
                   user_position={prop.userInfo.user_position}
                 />

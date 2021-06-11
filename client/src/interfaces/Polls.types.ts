@@ -6,6 +6,7 @@ export type TPollInfo = {
 
 export type TPoll = {
   id: number;
+  inter_id: number;
   userInfo: TPollInfo;
 }
 

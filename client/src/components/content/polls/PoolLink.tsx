@@ -6,8 +6,8 @@ import {Link} from "react-router-dom";
 
 interface IProps {
   id: number;
-  emp_name: string;
-  emp_position: string;
+  user_name: string;
+  user_position: string;
 }
 
 const PoolLink = (props: IProps) => {
@@ -15,9 +15,9 @@ const PoolLink = (props: IProps) => {
     <ListGroupItem>
       <div className={classes.item}>
         <div className="text-dark">
-          <span className="fw-bold">{props.emp_name}</span>
+          <span className="fw-bold">{props.user_name}</span>
           &nbsp;
-          <span>{props.emp_position}</span>
+          <span>{props.user_position}</span>
         </div>
         <div>
           <Link to={`/poll/${props.id}`}>

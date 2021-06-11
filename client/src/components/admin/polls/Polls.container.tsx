@@ -9,7 +9,7 @@ const AdminPollsContainer = () => {
 
 
   useEffect(() => {
-    request('/api/polls/', "GET").then((res) => {
+    request('/api/polls/admin', "GET").then((res) => {
       setPolls(res)
     }).catch(e => console.log(e));
   }, [])

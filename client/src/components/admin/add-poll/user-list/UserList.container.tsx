@@ -17,7 +17,7 @@ const UserListContainer = (props: IProps) => {
 
   const handleSubmit = async (form) => {
     try{
-      const data = await request('/api/polls/', "POST", {...form});
+      const data = await request('/api/polls/admin', "POST", {...form});
     } catch (e) {
       console.log(e);
     }

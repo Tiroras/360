@@ -9,7 +9,62 @@ import Interviewer from "../models/Interviwer";
 
 const pollsRouter: Router = Router();
 
-pollsRouter.get("/",
+pollsRouter.post("/",
+  async (req: Request, res: Response) => {
+    try {
+      const {userId} = req.body;
+      if(userId === 0){
+        res.status(400).json({
+          message: "Войдите в систему"
+        });
+      }
+
+      const interPollId: any = await Interviewer.findAll({
+        raw: true,
+        attributes: ["poll_id"],
+        where: {
+          user_id: userId,
+          isPassed: 0
+        }
+      });
+      if(interPollId.length === 0){
+        res.send([]);
+        res.status(201);
+      }
+
+      const polls = await Poll.findAll({
+        raw: true,
+        order: ["appraisal_target_id"],
+        where: {
+          id: {
+            [Op.or]: interPollId.map(pollId => pollId.poll_id)
+          },
+          isOver: 0
+        }
+      });
+      const target_users = await User.findAll({
+        raw: true,
+        attributes: ["id", "user_name", "user_position"],
+        where: {
+          id: {
+            [Op.in]: polls.map((poll: any) => poll.appraisal_target_id)
+          }
+        }
+      });
+
+      const resPolls = polls.reduce((array: any, poll: any, i: number) => {
+        array.push({id: poll.id, userInfo: target_users[i]});
+        return array;
+      }, []);
+
+      res.json(resPolls);
+    } catch (e) {
+      console.log(e);
+      res.status(500).json({message: "Что-то пошло не так"});
+    }
+});
+
+pollsRouter.get("/admin",
   async (req: Request, res: Response) => {
     try {
       const polls = await Poll.findAll({
@@ -37,7 +92,7 @@ pollsRouter.get("/",
     }
 });
 
-pollsRouter.post("/",
+pollsRouter.post("/admin",
   async (req: Request, res: Response) => {
   try {
     const {users} = req.body;
@@ -69,7 +124,7 @@ pollsRouter.get("/questions",
   }
 });
 
-pollsRouter.post("/interviewers",
+pollsRouter.post("/admin/interviewers",
   async (req: Request, res: Response) => {
   try {
     console.log(req.body)

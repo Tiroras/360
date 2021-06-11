@@ -3,7 +3,6 @@ import {ListGroup, Card} from "react-bootstrap";
 import PoolLink from "./PoolLink";
 import {TPoll} from "../../../interfaces/Polls.types";
 import classes from './Polls.module.css';
-import {setPollsAC} from "../../../store/pools-reducer";
 import PollMessage from "./PollMessage";
 
 
@@ -26,8 +25,8 @@ const Polls = (props: IProps) => {
                 <PoolLink
                   key={prop.id}
                   id={prop.id}
-                  emp_name={prop.emp_name}
-                  emp_position={prop.emp_position}
+                  user_name={prop.userInfo.user_name}
+                  user_position={prop.userInfo.user_position}
                 />
               ))}
             </ListGroup>

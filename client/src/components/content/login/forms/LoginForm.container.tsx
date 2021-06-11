@@ -7,7 +7,7 @@ import useHttp from "../../../../assets/hooks/http";
 
 const LoginFormContainer = () => {
   const dispatch = useDispatch();
-  const {error, request} = useHttp();
+  const {request} = useHttp();
   const handlerSubmit = async (form) => {
     try{
       const data = await request('/api/auth/login', "POST", {...form});

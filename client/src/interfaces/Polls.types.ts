@@ -1,8 +1,12 @@
+export type TPollInfo = {
+  id: number;
+  user_name: string;
+  user_position: string;
+}
+
 export type TPoll = {
   id: number;
-  emp_name: string;
-  emp_position: string;
-  isPassed: boolean;
+  userInfo: TPollInfo;
 }
 
 export type TQuestion = {

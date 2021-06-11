@@ -3,6 +3,7 @@ import {Dispatch} from "redux";
 import {authAPI} from "../api/api";
 import {AxiosResponse} from "axios";
 import {stopSubmit} from "redux-form";
+import {initializedSuccess} from "./app-reducer";
 
 
 const initialState = {
@@ -69,17 +70,10 @@ export const authentication = (id: number) => (dispatch: any) => {
   });
 }
 
-export const login = (email: string, password: string) => (dispatch: any) => {
-  // authAPI.postLogin(email, password).then((res: AxiosResponse) => {
-  //   if(res.status === 0){
-  //     dispatch(authentication(res.data.id))
-  //   }
-  //   else{
-  //     const message = res.data.messages ? res.data.messages[0] : 'Some error'
-  //     dispatch(stopSubmit('login', {_error: message}));
-  //   }
-  // })
-
+export const login = (token: string, userInfo: any) => (dispatch: any) => {
+  dispatch(setToken(token));
+  dispatch(setUserInfoAC(userInfo));
+  dispatch(setInAC(true));
 
 }
 

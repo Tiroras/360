@@ -3,30 +3,30 @@ import {TPoll, TQuestion} from "../interfaces/Polls.types";
 
 const initialState = {
   polls:[
-    {
-      id: 1,
-      emp_name: "Туроков Михаил Петрович",
-      emp_position: "Вапоразер",
-      isPassed: false
-    },
-    {
-      id: 2,
-      emp_name: "Силиков Петр Михайлович",
-      emp_position: "Вапоразер",
-      isPassed: false
-    },
-    {
-      id: 3,
-      emp_name: "Туземцев Сергей Викторович",
-      emp_position: "Вапоразер",
-      isPassed: false
-    },
-    {
-      id: 4,
-      emp_name: "Мемлюков Анатолий Картович",
-      emp_position: "Вапоразер",
-      isPassed: false
-    }
+    // {
+    //   id: 1,
+    //   emp_name: "Туроков Михаил Петрович",
+    //   emp_position: "Вапоразер",
+    //   isPassed: false
+    // },
+    // {
+    //   id: 2,
+    //   emp_name: "Силиков Петр Михайлович",
+    //   emp_position: "Вапоразер",
+    //   isPassed: false
+    // },
+    // {
+    //   id: 3,
+    //   emp_name: "Туземцев Сергей Викторович",
+    //   emp_position: "Вапоразер",
+    //   isPassed: false
+    // },
+    // {
+    //   id: 4,
+    //   emp_name: "Мемлюков Анатолий Картович",
+    //   emp_position: "Вапоразер",
+    //   isPassed: false
+    // }
   ],
   questions: [
     // {
@@ -123,13 +123,12 @@ type PollsActionType = ReturnType<typeof setPollsAC> | ReturnType<typeof removeP
 const poolsReducer = (state: TState = initialState, action: PollsActionType) => {
   switch (action.type) {
     case "SET-POLLS": {
-      return {...state, polls: state.polls.concat(action.polls)};
+      return {...state, polls: action.polls};
     }
     case "REMOVE-POLL": {
-      return {...state, polls: state.polls.filter((poll: TPoll) =>
-          poll.id !== action.pollID
-        )
-      };
+      return {...state, polls: state.polls.filter((poll) => {
+        return !(poll.id === action.pollID)
+      })};
     }
     case "SET-QUESTIONS": {
       return {...state, questions: action.questions}

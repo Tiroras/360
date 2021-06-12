@@ -1,7 +1,7 @@
 import React from 'react';
 import Info from "./Info";
 import {useSelector} from "react-redux";
-import {ReducersType} from "../../../../store/store";
+import {ReducersType} from "../../../../../store/store";
 
 
 

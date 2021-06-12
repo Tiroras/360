@@ -23,7 +23,7 @@ const SelectPollContainer = (props: IProps) => {
   const [polls, setPolls] = useState([])
   const [filteredPolls, setFilteredPolls] = useState([]);
   useEffect(() => {
-    request('/api/polls/', "GET").then((res) => {
+    request('/api/polls/admin', "GET").then((res) => {
       setPolls(res);
       setFilteredPolls(res);
     }).catch(e => console.log(e));

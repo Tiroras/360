@@ -20,8 +20,8 @@ const AdminAddInterviewerContainer = () => {
           delete form[key];
         }
       }
-      const data = await request(
-        '/api/polls/interviewers',
+      await request(
+        '/api/polls/admin/interviewers',
         "POST",
         {polls, userId: Object.keys(form)
         });

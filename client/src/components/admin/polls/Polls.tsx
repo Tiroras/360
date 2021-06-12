@@ -37,6 +37,7 @@ const Polls = (props: IProps) => {
       <div>
         {props.polls.map((poll: IPoll) => (
           <AdminPollItem
+            key={poll.id}
             id={poll.id}
             appraisal_target_id={poll.appraisal_target_id}
             isOver={poll.isOver}

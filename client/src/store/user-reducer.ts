@@ -1,9 +1,5 @@
 import {IUserInfo} from "../interfaces/User.types";
 import {Dispatch} from "redux";
-import {authAPI} from "../api/api";
-import {AxiosResponse} from "axios";
-import {stopSubmit} from "redux-form";
-import {initializedSuccess} from "./app-reducer";
 
 
 const initialState = {
@@ -61,14 +57,14 @@ export const logout = () => (dispatch: Dispatch<UserActionsType>) => {
   }))
 }
 
-export const authentication = (id: number) => (dispatch: any) => {
-  return authAPI.getMe(id).then((res: AxiosResponse) => {
-    if(res.status === 0){
-      const {id, user_name, user_position, isAdmin, login, email} = res.data;
-      dispatch(setUser({id, user_name, user_position, isAdmin, login, email}));
-    }
-  });
-}
+// export const authentication = (id: number) => (dispatch: any) => {
+//   return authAPI.getMe(id).then((res: AxiosResponse) => {
+//     if(res.status === 0){
+//       const {id, user_name, user_position, isAdmin, login, email} = res.data;
+//       dispatch(setUser({id, user_name, user_position, isAdmin, login, email}));
+//     }
+//   });
+// }
 
 export const login = (token: string, userInfo: any) => (dispatch: any) => {
   dispatch(setToken(token));
@@ -77,11 +73,11 @@ export const login = (token: string, userInfo: any) => (dispatch: any) => {
 
 }
 
-export const registration = (email: string, password: string) => (dispatch) => {
-  // console.log("You here", email, password)
-  // authAPI.postRegistr(email, password).then((res: AxiosResponse) => {
-  //   console.log(res);
-  // });
-}
+// export const registration = (email: string, password: string) => (dispatch) => {
+//   // console.log("You here", email, password)
+//   // authAPI.postRegistr(email, password).then((res: AxiosResponse) => {
+//   //   console.log(res);
+//   // });
+// }
 
 export default userReducer;

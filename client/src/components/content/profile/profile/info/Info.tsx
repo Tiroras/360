@@ -1,7 +1,7 @@
 import React from "react";
 import {Col, Image} from "react-bootstrap";
 import classes from './Info.module.css';
-import image from './../../../../assets/images/user.png';
+import image from '../../../../../assets/images/user.png';
 
 
 interface IProps {

@@ -6,3 +6,13 @@ export interface IUserInfo {
   login: string;
   email: string;
 }
+
+export interface ICompetence {
+  id: number;
+  competence: string;
+}
+
+export interface IResult {
+  competence: ICompetence;
+  result: number;
+}

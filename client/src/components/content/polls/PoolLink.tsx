@@ -22,13 +22,9 @@ const PoolLink = (props: IProps) => {
           <span>{props.user_position}</span>
         </div>
         <div>
-          <Link to={`/poll/${props.id}`}>
+          <Link to={{pathname: '/poll', search: `id=${props.id}&inter_id=${props.inter_id}`}}>
             <Button
               variant="warning"
-              onClick={props.setCurrentPoll({
-                poll_id: props.id,
-                inter_id: props.inter_id
-              })}
             >Перейти к опросу</Button>
           </Link>
         </div>

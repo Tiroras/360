@@ -1,17 +1,15 @@
 import React from 'react';
 import RegistrationForm from "./RegistrForm";
 import useHttp from "../../../../assets/hooks/http";
+import { Redirect } from 'react-router-dom';
 
 
 const RegistrationFormContainer = () => {
   const {request} = useHttp();
 
   const handleSubmit = async (form) => {
-    // console.log(form);
-    // authAPI.postRegistr(form)
-    // dispatch(registration(form.email, form.password));
     try{
-      const data = await request('/api/auth/register', "POST", {...form});
+      await request('/api/auth/register', "POST", {...form});
     } catch (e) {
 
     }

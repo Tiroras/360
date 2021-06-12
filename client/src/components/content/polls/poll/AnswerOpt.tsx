@@ -10,7 +10,7 @@ const AnswerOpts = (props: IProps) => {
   return (
     <div>
       <div>
-        <label htmlFor={`${props.id}-1`}>Совершенно согласен</label>
+        <label className="s18" htmlFor={`${props.id}-1`}>Совершенно согласен</label>
         <Field
           type="radio"
           component="input"
@@ -20,7 +20,7 @@ const AnswerOpts = (props: IProps) => {
         />
       </div>
       <div>
-        <label htmlFor={`${props.id}-2`}>Скорее согласен</label>
+        <label className="s18" htmlFor={`${props.id}-2`}>Скорее согласен</label>
         <Field
           type="radio"
           component="input"
@@ -30,7 +30,7 @@ const AnswerOpts = (props: IProps) => {
         />
       </div>
       <div>
-        <label htmlFor={`${props.id}-3`}>
+        <label className="s18" htmlFor={`${props.id}-3`}>
           Не знаю/ Не владею информацией
         </label>
         <Field
@@ -42,7 +42,7 @@ const AnswerOpts = (props: IProps) => {
         />
       </div>
       <div>
-        <label htmlFor={`${props.id}-4`}>
+        <label className="s18" htmlFor={`${props.id}-4`}>
           Скорее не согласен
         </label>
         <Field
@@ -54,7 +54,7 @@ const AnswerOpts = (props: IProps) => {
         />
       </div>
       <div>
-        <label htmlFor={`${props.id}-5`}>Полностью не согласен</label>
+        <label className="s18" htmlFor={`${props.id}-5`}>Полностью не согласен</label>
         <Field
           component="input"
           type="radio"

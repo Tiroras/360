@@ -13,7 +13,7 @@ const Question = (props: IProps) => {
     <ListGroup.Item>
       <div>
         <div>
-          <label className={'fw-bold'}>
+          <label className={'fw-bold s22'}>
             {props.question}
           </label>
         </div>

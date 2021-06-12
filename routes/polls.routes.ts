@@ -15,7 +15,7 @@ pollsRouter.post("/",
     try {
       const {userId} = req.body;
       if(userId === 0){
-        res.status(400).json({
+        return res.status(400).json({
           message: "Войдите в систему"
         });
       }
@@ -29,35 +29,39 @@ pollsRouter.post("/",
         }
       });
       if(interPollId.length === 0){
-        res.send([]);
-        res.status(201);
+        res.json([]);
+      } else {
+        const polls = await Poll.findAll({
+          raw: true,
+          order: ["appraisal_target_id"],
+          where: {
+            id: {
+              [Op.or]: interPollId.map(pollId => pollId.poll_id)
+            },
+            isOver: 0
+          }
+        });
+
+        if(polls.length === 0){
+          return res.status(500).json({message: "Опросы не найдены"})
+        }
+        const target_users = await User.findAll({
+          raw: true,
+          attributes: ["id", "user_name", "user_position"],
+          where: {
+            id: {
+              [Op.in]: polls.map((poll: any) => poll.appraisal_target_id)
+            }
+          }
+        });
+
+        const resPolls = polls.reduce((array: any, poll: any, i: number) => {
+          array.push({id: poll.id, inter_id: interPollId[i].id, userInfo: target_users[i]});
+          return array;
+        }, []);
+        res.json(resPolls);
       }
 
-      const polls = await Poll.findAll({
-        raw: true,
-        order: ["appraisal_target_id"],
-        where: {
-          id: {
-            [Op.or]: interPollId.map(pollId => pollId.poll_id)
-          },
-          isOver: 0
-        }
-      });
-      const target_users = await User.findAll({
-        raw: true,
-        attributes: ["id", "user_name", "user_position"],
-        where: {
-          id: {
-            [Op.in]: polls.map((poll: any) => poll.appraisal_target_id)
-          }
-        }
-      });
-
-      const resPolls = polls.reduce((array: any, poll: any, i: number) => {
-        array.push({id: poll.id, inter_id: interPollId[i].id, userInfo: target_users[i]});
-        return array;
-      }, []);
-      res.json(resPolls);
     } catch (e) {
       console.log(e);
       res.status(500).json({message: "Что-то пошло не так"});
@@ -164,9 +168,18 @@ pollsRouter.post("/admin/interviewers",
 pollsRouter.post("/answers",
   async (req: Request, res: Response) => {
   try {
-    const {answers, poll_id, inter_id} = req.body;
-    answers.shift();
+    const {answers, id: poll_id, inter_id} = req.body;
+    if(!inter_id || poll_id){
+      return res.status(400).json({
+        message: "Ошибка, не получен id"
+      });
+    }
+
+    await Interviewer.update({isPassed: true}, {where: {id: inter_id}});
+
+    await answers.shift();
     answers.map((answ) => {
+      console.log(answ)
       switch (answ) {
         case "agree": return 1;
         case "rather-agree": return 2;
@@ -175,9 +188,10 @@ pollsRouter.post("/answers",
         case "not-agree": return 5;
       }
     }).reduce((array, answ, i) => {
-      console.log({interviewer_id: inter_id, question_id: i+1, answer_variant_id: answ})
+      console.log(answ)
+      const answer = new Answer({interviewer_id: inter_id, question_id: i+1, answer_variant_id: answ});
+      answer.save();
     }, []);
-
   } catch (e) {
     console.log(e);
     res.status(500).json({message: "Что-то пошло не так"});

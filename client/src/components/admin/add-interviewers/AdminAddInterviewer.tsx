@@ -5,10 +5,10 @@ import SelectInterviewersContainer from "./users/SelectInterviewers.container";
 import {Form, reduxForm} from "redux-form";
 
 
-interface IProps {
-  input: string;
-  setInput: (input: string) => void;
-}
+// interface IProps {
+//   input: string;
+//   setInput: (input: string) => void;
+// }
 
 const AdminAddInterviewer = (props) => {
   return (

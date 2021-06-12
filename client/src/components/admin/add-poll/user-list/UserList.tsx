@@ -4,10 +4,10 @@ import UserListItem from "./UserListItem";
 import {reduxForm, Form} from "redux-form";
 
 
-interface IProps {
-  users: IUserInfo[];
-  handleSubmit: any;
-}
+// interface IProps {
+//   users: IUserInfo[];
+//   handleSubmit: any;
+// }
 
 const UserList = (props) => {
   return (

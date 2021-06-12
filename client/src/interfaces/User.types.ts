@@ -10,9 +10,5 @@ export interface IUserInfo {
 export interface ICompetence {
   id: number;
   competence: string;
-}
-
-export interface IResult {
-  competence: ICompetence;
-  result: number;
+  result: number
 }

@@ -20,7 +20,7 @@ async function start() {
     //   useUnifiedTopology: true,
     //   useCreateIndex: true
     // })
-    sequelize.sync().then(() => {
+    sequelize.authenticate().then(() => {
       app.listen(5000, () => console.log("Started"));
     })
   } catch (e) {

@@ -1,4 +1,4 @@
-import {IUserInfo} from "../interfaces/User.types";
+import {ICompetence, IUserInfo} from "../interfaces/User.types";
 import {Dispatch} from "redux";
 
 
@@ -13,13 +13,14 @@ const initialState = {
       isAdmin: false,
       login: '',
       email: ""
-    }
+    },
+    competences: []
   }
 }
 
 type TState = typeof initialState;
 type UserActionsType = ReturnType<typeof setInAC> | ReturnType<typeof setToken> |
-  ReturnType<typeof setUserInfoAC>
+  ReturnType<typeof setUserInfoAC> | ReturnType<typeof setCompetenceAC>
 
 const userReducer = (state: TState = initialState, action: UserActionsType) => {
   switch (action.type) {
@@ -32,6 +33,9 @@ const userReducer = (state: TState = initialState, action: UserActionsType) => {
     case "SET-TOKEN": {
       return {...state, user: {...state.user, token: action.token}}
     }
+    case "SET-COMPETENCES": {
+      return {...state, user: {...state.user, competences: action.competences}}
+    }
     default: return state;
   }
 }
@@ -39,6 +43,7 @@ const userReducer = (state: TState = initialState, action: UserActionsType) => {
 export const setInAC = (isIn: boolean) => ({type: "SET-IN", isIn} as const);
 export const setUserInfoAC = (info: IUserInfo) => ({type: "SET-USER-INFO", info} as const);
 export const setToken = (token) => ({type: "SET-TOKEN", token} as const);
+export const setCompetenceAC = (competences: ICompetence[]) => ({type: "SET-COMPETENCES", competences} as const);
 
 
 export const setUser = (info: IUserInfo) => (dispatch: Dispatch<UserActionsType>) => {

@@ -176,8 +176,8 @@ pollsRouter.post("/answers",
       });
     }
 
-    answers.shift();
-    const numbers = answers.map((answ) => {
+    await answers.shift();
+    const numbers = await answers.map((answ) => {
       switch (answ) {
         case 'agree': return 1;
         case 'rather-agree': return 2;
@@ -188,7 +188,9 @@ pollsRouter.post("/answers",
       }
     });
     console.log(Answer);
-    numbers.map((answ, i) => {
+    const variants = await Variant.findAll({raw: true});
+    console.log(variants);
+    await numbers.map((answ, i) => {
       // console.log("Перед отправкой: ", answ)
       // const answer = new Answer({answer_variant_id: answ, interviewer_id: inter_id, question_id: i+1});
       // console.log(answer)

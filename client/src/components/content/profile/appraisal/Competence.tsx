@@ -1,12 +1,12 @@
 import React from 'react';
-import {IResult} from "../../../../interfaces/User.types";
+import {ICompetence} from "../../../../interfaces/User.types";
 
 
-const Competence = (props: IResult) => {
+const Competence = (props: ICompetence) => {
   return(
     <div>
-      <span className="s18 bold">{props.competence.competence}: </span>
-      <span>{props.result}</span>
+      <span className="s34 bold">{props.competence}: </span>
+      <span className="s22">{props.result}</span>
     </div>
   )
 }

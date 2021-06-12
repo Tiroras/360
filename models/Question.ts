@@ -1,7 +1,7 @@
-import {Schema, model} from "mongoose"
 import {DataTypes, Model} from "sequelize";
 import sequelize from "../db";
 import Answer from "./Answer";
+import Competence from "./Competence";
 
 class Question extends Model {}
 Question.init({
@@ -15,7 +15,7 @@ Question.init({
     type: DataTypes.STRING
   }
 }, {sequelize, modelName: "questions"});
-Question.hasMany(Answer, {foreignKey: "question_id"})
+Question.hasMany(Answer, {foreignKey: "question_id"});
 
 export default Question;
 

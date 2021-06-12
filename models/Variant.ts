@@ -1,4 +1,3 @@
-import {Schema, model} from "mongoose"
 import {Model, DataTypes} from "sequelize";
 import sequelize from "../db";
 import Answer from "./Answer";
@@ -14,11 +13,9 @@ Variant.init({
   },
   variant: {
     type: DataTypes.STRING(20),
-    allowNull: false
   },
   variant_text: {
     type: DataTypes.STRING(35),
-    allowNull: false
   }
 }, {sequelize, modelName: "variant"});
 

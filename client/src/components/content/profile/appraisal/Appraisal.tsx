@@ -1,18 +1,20 @@
 import React from 'react';
-import {IResult} from "../../../../interfaces/User.types";
+import {ICompetence} from "../../../../interfaces/User.types";
 import Competence from "./Competence";
+import classes from "./Appraisal.module.css";
 
 
 interface IProps {
-  comptences: IResult[]
+  comptences: ICompetence[]
 }
 
 const Appraisal = (props: IProps) => {
   return(
-    <div>
-      {props.comptences.map((comp: IResult) => (
+    <div className={classes.competences}>
+      {props.comptences.map((comp: ICompetence) => (
         <Competence
-          key={comp.competence.id}
+          key={comp.id}
+          id={comp.id}
           competence={comp.competence}
           result={comp.result}
         />

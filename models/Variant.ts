@@ -20,7 +20,7 @@ Variant.init({
     type: DataTypes.STRING(35),
     allowNull: false
   }
-}, {sequelize, modelName: "answer_variant"});
+}, {sequelize, modelName: "variant"});
 
 Variant.hasMany(Answer, {foreignKey: "answer_variant_id"});
 

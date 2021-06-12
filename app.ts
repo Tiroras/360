@@ -1,5 +1,4 @@
 import express, {json, urlencoded} from "express";
-import mongoose from "mongoose";
 import sequelize from "./db";
 import authRouter from "./routes/auth.routes";
 import usersRouter from "./routes/users.routes";
@@ -21,7 +20,7 @@ async function start() {
     //   useUnifiedTopology: true,
     //   useCreateIndex: true
     // })
-    sequelize.authenticate().then(() => {
+    sequelize.sync().then(() => {
       app.listen(5000, () => console.log("Started"));
     })
   } catch (e) {

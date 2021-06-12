@@ -6,6 +6,7 @@ import User from "../models/User";
 import { Op } from "sequelize";
 import Interviewer from "../models/Interviwer";
 import Answer from "../models/Answer";
+import Variant from "../models/Variant";
 
 
 const pollsRouter: Router = Router();
@@ -175,23 +176,27 @@ pollsRouter.post("/answers",
       });
     }
 
-    await Interviewer.update({isPassed: true}, {where: {id: inter_id}});
-
-    await answers.shift();
-    answers.map((answ) => {
-      console.log(answ)
+    answers.shift();
+    const numbers = answers.map((answ) => {
       switch (answ) {
-        case "agree": return 1;
-        case "rather-agree": return 2;
-        case "not-sure": return 3;
-        case "rather-not-agree": return 4;
-        case "not-agree": return 5;
+        case 'agree': return 1;
+        case 'rather-agree': return 2;
+        case 'not-sure': return 3;
+        case 'rather-not-agree': return 4;
+        case 'not-agree': return 5;
+        default: return 0;
       }
-    }).reduce((array, answ, i) => {
-      console.log(answ)
-      const answer = new Answer({interviewer_id: inter_id, question_id: i+1, answer_variant_id: answ});
-      answer.save();
-    }, []);
+    });
+    console.log(Answer);
+    numbers.map((answ, i) => {
+      // console.log("Перед отправкой: ", answ)
+      // const answer = new Answer({answer_variant_id: answ, interviewer_id: inter_id, question_id: i+1});
+      // console.log(answer)
+      // answer.save();
+      Answer.create({answer_variant_id: answ, interviewer_id: inter_id, question_id: i+1})
+        .catch(e => console.log(e))
+    });
+    await Interviewer.update({isPassed: true}, {where: {id: inter_id}});
   } catch (e) {
     console.log(e);
     res.status(500).json({message: "Что-то пошло не так"});

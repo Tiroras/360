@@ -1,4 +1,3 @@
-import {Schema, model, Types} from "mongoose";
 import {DataTypes, Model} from "sequelize";
 import sequelize from "../db";
 

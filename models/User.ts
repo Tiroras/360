@@ -1,5 +1,3 @@
-import {Schema, model} from "mongoose";
-import {TUserDocument} from "../interfaces/Model.types";
 import {Model, DataTypes} from "sequelize";
 import sequelize from "../db";
 import Interviewer from "./Interviwer";

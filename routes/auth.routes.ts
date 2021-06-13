@@ -66,7 +66,6 @@ authRouter.post('/login',
         message: "Некорректные данные при входе"
       })
     }
-
     const {email, password} = req.body;
     const user = await User.findOne({where: {email}}).then((data: any) => {
       return data.dataValues
@@ -79,7 +78,6 @@ authRouter.post('/login',
     if(!isMatch){
       return res.status(400).json({message: "Неверный пароль, попоробуйте снова"});
     }
-
     const token = jwt.sign(
       {userId: user.id},
       "tuturu",

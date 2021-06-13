@@ -15,11 +15,6 @@ app.use('/api/polls', pollsRouter);
 
 async function start() {
   try {
-    // await mongoose.connect("mongodb+srv://Londos:lamyke@cluster0.illbk.mongodb.net/test?retryWrites=true&w=majority", {
-    //   useNewUrlParser: true,
-    //   useUnifiedTopology: true,
-    //   useCreateIndex: true
-    // })
     sequelize.authenticate().then(() => {
       app.listen(5000, () => console.log("Started"));
     })

@@ -1,9 +1,10 @@
 import {Sequelize} from "sequelize";
 
 
+
 const sequelize = new Sequelize("s86206_db", "admin", "bugi2021", {
   dialect: "mysql",
-  host: "31.172.66.143",
+  host: "mysql",
   define: {
     timestamps: false
   }

@@ -1,5 +1,26 @@
 .competences{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: start;
+}
+.competence{
+    margin-top: 2vh;
+    margin-left: 3vw;
+}
+
+.appraisal{
+    display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.info{
+    max-width: 500px;
+    max-height: 250px;
+    margin-top: 2vh;
+    margin-right: 3vw;
+}
+
+.text{
+    margin-top: 10vh;
 }

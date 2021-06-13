@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import UserList from "./UserList";
 import {IUserInfo} from "../../../../interfaces/User.types";
 import useHttp from "../../../../assets/hooks/http";
+import { Redirect } from 'react-router-dom';
 
 
 interface IProps {
@@ -9,6 +10,7 @@ interface IProps {
 }
 
 const UserListContainer = (props: IProps) => {
+  const [redirect, setRedirect] = useState(false);
   const {request} = useHttp();
 
   const data: any = {
@@ -18,9 +20,13 @@ const UserListContainer = (props: IProps) => {
   const handleSubmit = async (form) => {
     try{
       await request('/api/polls/admin', "POST", {...form});
+      setRedirect(true)
     } catch (e) {
       console.log(e);
     }
+  }
+  if(redirect){
+    return <Redirect to={"/"}/>;
   }
 
   return(

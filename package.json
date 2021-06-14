@@ -4,7 +4,7 @@
   "description": "360",
   "main": "app.ts",
   "scripts": {
-    "start": "node app.ts",
+    "start": "ts-node app.ts",
     "server": "nodemon app.ts",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""

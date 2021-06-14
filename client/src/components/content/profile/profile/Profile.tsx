@@ -2,6 +2,7 @@ import React from 'react';
 import InfoContainer from "./info/Info.container";
 import {ListGroup} from "react-bootstrap";
 import GoToPolls from "./go-to-polls/GoToPolls";
+import classes from "./Profile.module.css";
 
 
 interface IProps {
@@ -10,7 +11,7 @@ interface IProps {
 
 const Profile = (props: IProps) => {
   return(
-    <div className="text-dark">
+    <div className={`text-dark ${classes.profile}`}>
       <ListGroup>
         <ListGroup.Item>
           <InfoContainer />

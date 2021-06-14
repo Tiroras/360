@@ -7,7 +7,7 @@
     "start": "node app.ts",
     "server": "nodemon app.ts",
     "client": "npm run start --prefix client",
-    "dev": "concurrently \"yarn server\" \"yarn client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Tiroras <shnyrov2000@gmail.com>",
   "license": "MIT",

@@ -2,9 +2,9 @@ import {Sequelize} from "sequelize";
 
 
 
-const sequelize = new Sequelize("360", "root", "", {
+const sequelize = new Sequelize("360", "root", "root", {
   dialect: "mysql",
-  host: "http://31.172.66.143",
+  host: "31.172.66.143",
   define: {
     timestamps: false
   }

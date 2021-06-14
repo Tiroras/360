@@ -15,6 +15,7 @@ app.use('/api/polls', pollsRouter);
 
 
 app.use("/", express.static(path.resolve(__dirname, 'client', 'build')));
+//app.use(express.static('static'))
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
 })

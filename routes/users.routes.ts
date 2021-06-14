@@ -59,32 +59,41 @@ usersRouter.post("/results",
     });
 
     const competences = await Competence.findAll({raw: true});
-    const questions = await Question.findAll({raw: true});
+    console.log(answers)
+    if(answers.length === 0){
+      const results = competences.map((comp: any) => {
+        return {id: comp.id, competence: comp.competence, result: 0}
+      })
+      res.json(results);
+    } else {
+      const questions = await Question.findAll({raw: true});
 
-    const compArrayAnswers = competences.reduce((arr: any, comp: any, i: number) => {
-      const comp_answers = questions.reduce((arr: any, quest: any) => {
-        if(quest.competence_id === comp.id){
-          const answs: any = answers.filter((answ: any) => answ.question_id === quest.id);
-          arr.push(answs[0].answer_variant_id)
-        }
+      const compArrayAnswers = competences.reduce((arr: any, comp: any, i: number) => {
+        const comp_answers = questions.reduce((arr: any, quest: any) => {
+          if(quest.competence_id === comp.id){
+            const answs: any = answers.filter((answ: any) => answ.question_id === quest.id);
+            arr.push(answs[0].answer_variant_id)
+          }
+          return arr;
+        }, []);
+        arr.push({
+          id: comp.id,
+          competence: comp.competence,
+          comp_answers
+        });
         return arr;
       }, []);
 
-      arr.push({
-        id: comp.id,
-        competence: comp.competence,
-        comp_answers
-      });
-      return arr;
-    }, []);
 
-    const compAnswers = compArrayAnswers.map((comp: any) => {
-      const resultate = comp.comp_answers.reduce((prev: number, answ: any) => {
-        return prev + answ;
-      }, 0);
-      return {id: comp.id, competence: comp.competence, result: resultate / (comp.comp_answers.length + 1)}
-    })
-    res.json(compAnswers);
+
+      const compAnswers = compArrayAnswers.map((comp: any) => {
+        const resultate = comp.comp_answers.reduce((prev: number, answ: any) => {
+          return prev + answ;
+        }, 0);
+        return {id: comp.id, competence: comp.competence, result: resultate / (comp.comp_answers.length + 1)}
+      })
+      res.json(compAnswers);
+    }
   } catch (e) {
     console.log(e)
     res.status(500).json({message: "Что-то пошло не так"});

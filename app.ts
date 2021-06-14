@@ -9,7 +9,7 @@ import path from "path";
 const app = express();
 app.use(json());
 app.use(urlencoded({extended: true}));
-app.use('/api/auth', authRouter);
+app.use('/api/auth', authRouter); 
 app.use('/api/users', usersRouter);
 app.use('/api/polls', pollsRouter);
 

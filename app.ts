@@ -15,18 +15,17 @@ app.use('/api/polls', pollsRouter);
 
 if(process.env.NODE_ENV === "production"){
   app.use("/", express.static(path.join(__dirname, 'client', 'build')));
-
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   })
 }
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 async function start() {
   try {
     await sequelize.sync({force: false}).then(() => {
-      app.listen(PORT, () => console.log("Started: ", process.env.PORT));
+      app.listen(PORT, () => console.log("Started: ", PORT));
     })
   } catch (e) {
     console.log("Server Error", e);

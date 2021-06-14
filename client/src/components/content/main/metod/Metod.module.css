@@ -1,0 +1,19 @@
+.metod{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4vh;
+}
+
+.metod_info{
+    padding: 8vh 8vw;
+    text-align: left;
+}
+
+.metod_image{
+
+}
+
+.metod_image img{
+    width: 500px;
+}

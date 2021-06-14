@@ -1,0 +1,19 @@
+.competences{
+    margin-top: 4vh;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+
+}
+
+.list_competences{
+    text-align: left;
+    padding-left: 2vw;
+}
+
+.text{
+    padding-top: 10vh;
+}

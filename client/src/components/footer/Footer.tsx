@@ -5,7 +5,7 @@ import FooterNavContainer from "./three/FooterNav.container";
 
 const Footer = React.memo(() => {
   return(
-    <footer className={`${classes.footer} bg-success text-light`}>
+    <footer className={`${classes.footer} bg-success text-light mt-auto mb-0`}>
       <div className={classes.block}>
         <div className={classes.el}>
           Icons made by&nbsp;

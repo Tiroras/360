@@ -10,7 +10,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85f53fa6-f49a-41b2-9667-1976af4feff6" name="Default Changelist" comment="" />
+    <list default="true" id="85f53fa6-f49a-41b2-9667-1976af4feff6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -128,6 +132,7 @@
       <workItem from="1623703057956" duration="3883000" />
       <workItem from="1623743182259" duration="6985000" />
       <workItem from="1623764897696" duration="435000" />
+      <workItem from="1623765339952" duration="646000" />
     </task>
     <servers />
   </component>

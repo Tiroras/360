@@ -30,11 +30,8 @@ const ContentContainer = () => {
     }
   }, [userId])
 
-  const initialized: boolean = useSelector((state: ReducersType) => state.app.initialized);
-
   return(
     <Content
-      initialized={initialized}
     />
   )
 }

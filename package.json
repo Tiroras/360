@@ -7,7 +7,7 @@
     "start": "cross-env NODE_ENV=production ts-node app.ts",
     "server": "nodemon app.ts",
     "client": "npm run start --prefix client",
-    "dev": "ross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\""
+    "dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Tiroras <shnyrov2000@gmail.com>",
   "license": "MIT",

@@ -1,6 +1,7 @@
 import React from 'react';
 import {IUserInfo} from "../../../../interfaces/User.types";
 import SelectInterviewersItem from "./SelectInterviewersItem";
+import {Table} from "react-bootstrap";
 
 
 interface IProps {
@@ -9,8 +10,8 @@ interface IProps {
 
 const SelectInterviewers = (props: IProps) => {
   return(
-    <div>
-      <div>
+    <Table>
+      <tbody>
         {props.users.map((user: IUserInfo) => (
           <SelectInterviewersItem
             key={user.id}
@@ -22,8 +23,8 @@ const SelectInterviewers = (props: IProps) => {
             email={user.email}
           />
         ))}
-      </div>
-    </div>
+      </tbody>
+    </Table>
   )
 }
 

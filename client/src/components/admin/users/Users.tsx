@@ -1,7 +1,7 @@
 import React from 'react';
 import {IUserInfo} from "../../../interfaces/User.types";
 import User from "./User";
-import {ListGroup} from "react-bootstrap";
+import {Table} from "react-bootstrap";
 
 
 const Users = (props) => {
@@ -10,15 +10,16 @@ const Users = (props) => {
       <div>
         <h3>Список пользователй</h3>
       </div>
-      <ListGroup horizontal>
-        <ListGroup.Item>id пользователя</ListGroup.Item>
-        <ListGroup.Item>ФИО пользователя</ListGroup.Item>
-        <ListGroup.Item>Должность пользователя</ListGroup.Item>
-        <ListGroup.Item>Это админ</ListGroup.Item>
-        <ListGroup.Item>Логин пользователя</ListGroup.Item>
-        <ListGroup.Item>Почта пользователя</ListGroup.Item>
-      </ListGroup>
-      <ListGroup>
+      <Table>
+        <thead>
+          <th>id пользователя</th>
+          <th>ФИО пользователя</th>
+          <th>Должность пользователя</th>
+          <th>Это админ</th>
+          <th>Логин пользователя</th>
+          <th>Почта пользователя</th>
+        </thead>
+        <tbody>
         {props.users.map((user: IUserInfo) => (
           <User
             key={user.id}
@@ -30,7 +31,8 @@ const Users = (props) => {
             email={user.email}
           />
         ))}
-      </ListGroup>
+        </tbody>
+      </Table>
     </div>
   )
 }

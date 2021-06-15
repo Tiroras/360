@@ -1,6 +1,4 @@
 import React from 'react';
-import classes from "../AdminPolls.module.css";
-import {ListGroup} from "react-bootstrap";
 
 
 interface IProps {
@@ -15,29 +13,29 @@ interface IProps {
 
 const AdminPollItem = (props: IProps) => {
   return(
-    <ListGroup horizontal={'sm'} className={classes.poll}>
-      <ListGroup.Item className="poll-id">
+    <tr>
+      <td className="poll-id">
         {props.id}
-      </ListGroup.Item>
-      <ListGroup.Item className="poll-target-id">
+      </td>
+      <td className="poll-target-id">
         {props.appraisal_target_id}
-      </ListGroup.Item>
-      <ListGroup.Item className="poll-isOver">
+      </td>
+      <td className="poll-isOver">
         {props.isOver}
-      </ListGroup.Item>
-      <ListGroup.Item className="poll-target-name">
+      </td>
+      <td className="poll-target-name">
         {props.user_name}
-      </ListGroup.Item>
-      <ListGroup.Item className="poll-target-position">
+      </td>
+      <td className="poll-target-position">
         {props.user_position}
-      </ListGroup.Item>
-      <ListGroup.Item className="poll-target-login">
+      </td>
+      <td className="poll-target-login">
         {props.login}
-      </ListGroup.Item>
-      <ListGroup.Item className="poll-target-email">
+      </td>
+      <td className="poll-target-email">
         {props.email}
-      </ListGroup.Item>
-    </ListGroup>
+      </td>
+    </tr>
   )
 }
 

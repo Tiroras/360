@@ -14,44 +14,54 @@ interface IPoll {
 }
 
 const SelectPollListItem = (props: IPoll) => {
-  return(
-    <div>
-      <label htmlFor={`poll-${props.id}`}>
-        <ListGroup horizontal>
-          <ListGroupItem>
-            <Field
-              type="radio"
-              component="input"
-              id={`poll-${props.id}`}
-              value={`${props.id}`}
-              name="polls"
-            />
-          </ListGroupItem>
-          <ListGroupItem>
-            {props.id}
-          </ListGroupItem>
-          <ListGroupItem>
-            {props.appraisal_target_id}
-          </ListGroupItem>
-          <ListGroupItem>
-            {props.isOver}
-          </ListGroupItem>
-          <ListGroupItem>
-            {props.user_name}
-          </ListGroupItem>
-          <ListGroupItem>
-            {props.user_position}
-          </ListGroupItem>
-          <ListGroupItem>
-            {props.login}
-          </ListGroupItem>
-          <ListGroupItem>
-            {props.email}
-          </ListGroupItem>
-        </ListGroup>
-      </label>
-    </div>
-  )
+  return (
+    <tr>
+      <td>
+        <Field
+          type="radio"
+          component="input"
+          id={`poll-${props.id}`}
+          value={`${props.id}`}
+          name="polls"
+        />
+      </td>
+      <td>
+        <label htmlFor={`poll-${props.id}`}>
+          {props.id}
+        </label>
+      </td>
+      <td>
+        <label htmlFor={`poll-${props.id}`}>
+          {props.appraisal_target_id}
+        </label>
+      </td>
+      <td>
+        <label htmlFor={`poll-${props.id}`}>
+          {props.isOver}
+        </label>
+      </td>
+      <td>
+        <label htmlFor={`poll-${props.id}`}>
+          {props.user_name}
+        </label>
+      </td>
+      <td>
+        <label htmlFor={`poll-${props.id}`}>
+          {props.user_position}
+        </label>
+      </td>
+      <td>
+        <label htmlFor={`poll-${props.id}`}>
+          {props.login}
+        </label>
+      </td>
+      <td>
+        <label htmlFor={`poll-${props.id}`}>
+          {props.email}
+        </label>
+      </td>
+    </tr>
+  );
 }
 
 export default SelectPollListItem;

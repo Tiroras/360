@@ -1,6 +1,7 @@
 .profile{
     display: flex;
-    padding: 2vh 20vw;
+    padding: 2vh 20vw 50vh 20vw;
+    flex-wrap: wrap;
 }
 
 .block{

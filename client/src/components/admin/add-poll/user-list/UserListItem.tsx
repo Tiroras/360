@@ -7,39 +7,47 @@ import {Field} from "redux-form";
 
 const UserListItem = (props: IUserInfo) => {
   return (
-    <div>
-      <label htmlFor={`user-${props.id}`}>
-        <ListGroup horizontal>
-          <ListGroup.Item>
-            <Field
-              type="radio"
-              component="input"
-              id={`user-${props.id}`}
-              value={`${props.id}`}
-              name={`users`}
-            />
-          </ListGroup.Item>
-          <ListGroup.Item className="user-id">
-            {props.id}
-          </ListGroup.Item>
-          <ListGroup.Item className="user-name">
-            {props.user_name}
-          </ListGroup.Item>
-          <ListGroup.Item className="user-pos">
-            {props.user_position}
-          </ListGroup.Item>
-          <ListGroup.Item className="user-login">
-            {props.login}
-          </ListGroup.Item>
-          <ListGroup.Item className="user-email">
-            {props.email}
-          </ListGroup.Item>
-          <ListGroup.Item className="user-admin">
-            {props.isAdmin}
-          </ListGroup.Item>
-        </ListGroup>
-      </label>
-    </div>
+    <tr>
+      <td>
+        <Field
+          type="radio"
+          component="input"
+          id={`user-${props.id}`}
+          value={`${props.id}`}
+          name={`users`}
+        />
+      </td>
+      <td className="user-id">
+        <label htmlFor={`user-${props.id}`}>
+          {props.id}
+        </label>
+      </td>
+      <td className="user-name">
+        <label htmlFor={`user-${props.id}`}>
+          {props.user_name}
+        </label>
+      </td>
+      <td className="user-pos">
+        <label htmlFor={`user-${props.id}`}>
+          {props.user_position}
+        </label>
+      </td>
+      <td className="user-login">
+        <label htmlFor={`user-${props.id}`}>
+          {props.login}
+        </label>
+      </td>
+      <td className="user-email">
+        <label htmlFor={`user-${props.id}`}>
+          {props.email}
+        </label>
+      </td>
+      <td className="user-admin">
+        <label htmlFor={`user-${props.id}`}>
+          {props.isAdmin}
+        </label>
+      </td>
+    </tr>
   );
 }
 

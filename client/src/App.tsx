@@ -9,7 +9,7 @@ import ContentContainer from "./components/content/Contents.container";
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="App body">
         <Header />
         <ContentContainer />
         <Footer />

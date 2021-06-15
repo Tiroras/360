@@ -6,38 +6,46 @@ import {Field} from "redux-form";
 
 const SelectInterviewersItem = (props: IUserInfo) => {
   return (
-    <div>
-      <label htmlFor={`user-${props.id}`}>
-        <ListGroup horizontal>
-          <ListGroupItem>
-            <Field
-              component={"input"}
-              type="checkbox"
-              name={`${props.id}`}
-              id={`user-${props.id}`}
-            />
-          </ListGroupItem>
-          <ListGroupItem className="user-id">
+      <tr>
+        <td>
+          <Field
+            component={"input"}
+            type="checkbox"
+            name={`${props.id}`}
+            id={`user-${props.id}`}
+          />
+        </td>
+        <td className="user-id">
+          <label htmlFor={`user-${props.id}`}>
             {props.id}
-          </ListGroupItem>
-          <ListGroupItem className="user-name">
+          </label>
+        </td>
+        <td className="user-name">
+          <label htmlFor={`user-${props.id}`}>
             {props.user_name}
-          </ListGroupItem>
-          <ListGroupItem className="user-pos">
+          </label>
+        </td>
+        <td className="user-pos">
+          <label htmlFor={`user-${props.id}`}>
             {props.user_position}
-          </ListGroupItem>
-          <ListGroupItem className="user-login">
+          </label>
+        </td>
+        <td className="user-login">
+          <label htmlFor={`user-${props.id}`}>
             {props.login}
-          </ListGroupItem>
-          <ListGroupItem className="user-email">
+          </label>
+        </td>
+        <td className="user-email">
+          <label htmlFor={`user-${props.id}`}>
             {props.email}
-          </ListGroupItem>
-          <ListGroupItem className="user-admin">
+          </label>
+        </td>
+        <td className="user-admin">
+          <label htmlFor={`user-${props.id}`}>
             {props.isAdmin}
-          </ListGroupItem>
-        </ListGroup>
-      </label>
-    </div>
+          </label>
+        </td>
+    </tr>
   );
 }
 

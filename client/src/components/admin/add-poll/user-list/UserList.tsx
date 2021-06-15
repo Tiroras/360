@@ -2,6 +2,7 @@ import React from 'react';
 import {IUserInfo} from "../../../../interfaces/User.types";
 import UserListItem from "./UserListItem";
 import {reduxForm, Form} from "redux-form";
+import {Table} from "react-bootstrap";
 
 
 // interface IProps {
@@ -22,7 +23,17 @@ const UserList = (props) => {
           Создать опрос
         </button>
       </div>
-      <div>
+      <Table>
+        <thead>
+          <th>*</th>
+          <th>id пользователя</th>
+          <th>фио пользователя</th>
+          <th>Должность</th>
+          <th>Логин</th>
+          <th>Электронная почта</th>
+          <th>Это Админ</th>
+        </thead>
+        <tbody>
         {props.users.map((user: IUserInfo) => (
           <UserListItem
             key={user.id}
@@ -34,7 +45,8 @@ const UserList = (props) => {
             email={user.email}
           />
         ))}
-      </div>
+        </tbody>
+      </Table>
     </Form>
   );
 }

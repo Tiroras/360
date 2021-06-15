@@ -1,7 +1,6 @@
 import React from 'react'
 import classes from "./Content.module.css";
 import Router from "./router/Router";
-import Preloader from "../../assets/elements/Preloadre";
 
 
 interface IProps {
@@ -9,14 +8,14 @@ interface IProps {
 }
 
 const Content = (props: IProps) => {
-  return(
-    <div>
-      <main className={classes.content}>
-        {/*{props.initialized ? <Router /> : <Preloader />}*/}
-        <Router />
-      </main>
-    </div>
-  )
+  return (
+    <main className={`${classes.content} content`}>
+      <div>
+        <Router/>
+      </div>
+      {/*{props.initialized ? <Router /> : <Preloader />}*/}
+    </main>
+  );
 }
 
 export default Content;

@@ -1,5 +1,6 @@
 import React from 'react';
 import SelectPollListItem from "./SelectPollListItem";
+import {Table} from "react-bootstrap";
 
 
 interface IPoll {
@@ -18,8 +19,8 @@ interface IProps {
 
 const SelectPollList = (props: IProps) => {
   return(
-    <div>
-      <div>
+    <Table>
+      <tbody>
         {props.polls.map((poll: IPoll) => (
           <SelectPollListItem
             key={poll.id}
@@ -32,8 +33,8 @@ const SelectPollList = (props: IProps) => {
             email={poll.email}
           />
         ))}
-      </div>
-    </div>
+      </tbody>
+    </Table>
   )
 }
 

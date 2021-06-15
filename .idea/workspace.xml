@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="85f53fa6-f49a-41b2-9667-1976af4feff6" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1tLTyx8ZepNwGMtypmfEs5ELXqc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="ts.external.directory.path" value="E:\Programs-Work\360server\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Programs-Work\360server\client\src\assets\images\spinner" />
+      <recent name="E:\Programs-Work\360server" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Programs-Work\360server\client\src\components\content\profile\profile" />
+      <recent name="E:\Programs-Work\360server\client\src\components\content\router" />
+      <recent name="E:\Programs-Work\360server\client\src\components\content" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="85f53fa6-f49a-41b2-9667-1976af4feff6" name="Default Changelist" comment="" />
+      <created>1622547627427</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1622547627427</updated>
+      <workItem from="1622547628704" duration="1202000" />
+      <workItem from="1622548848276" duration="7536000" />
+      <workItem from="1622557086008" duration="5301000" />
+      <workItem from="1622562454333" duration="3565000" />
+      <workItem from="1622570648710" duration="7557000" />
+      <workItem from="1622634669626" duration="5377000" />
+      <workItem from="1622642561582" duration="7028000" />
+      <workItem from="1622656879974" duration="6049000" />
+      <workItem from="1622663669810" duration="1355000" />
+      <workItem from="1622667780212" duration="1607000" />
+      <workItem from="1622711877770" duration="1844000" />
+      <workItem from="1622717527007" duration="3140000" />
+      <workItem from="1622720717204" duration="4985000" />
+      <workItem from="1622726282629" duration="1478000" />
+      <workItem from="1622727800089" duration="606000" />
+      <workItem from="1622729933416" duration="6607000" />
+      <workItem from="1622746177700" duration="997000" />
+      <workItem from="1622750391055" duration="4591000" />
+      <workItem from="1622830557966" duration="594000" />
+      <workItem from="1622911585918" duration="1438000" />
+      <workItem from="1622968787084" duration="14421000" />
+      <workItem from="1622988820297" duration="1616000" />
+      <workItem from="1622991369623" duration="931000" />
+      <workItem from="1622992325829" duration="4073000" />
+      <workItem from="1623061855630" duration="6635000" />
+      <workItem from="1623079857702" duration="3674000" />
+      <workItem from="1623097321713" duration="4774000" />
+      <workItem from="1623142746247" duration="1438000" />
+      <workItem from="1623150346959" duration="8992000" />
+      <workItem from="1623164210180" duration="2023000" />
+      <workItem from="1623171425348" duration="5248000" />
+      <workItem from="1623176821270" duration="213000" />
+      <workItem from="1623257815175" duration="4419000" />
+      <workItem from="1623263693148" duration="5736000" />
+      <workItem from="1623306230704" duration="983000" />
+      <workItem from="1623307258150" duration="154000" />
+      <workItem from="1623307441797" duration="6637000" />
+      <workItem from="1623318391416" duration="2551000" />
+      <workItem from="1623322030075" duration="2908000" />
+      <workItem from="1623324985493" duration="6620000" />
+      <workItem from="1623336278461" duration="5670000" />
+      <workItem from="1623343549963" duration="10738000" />
+      <workItem from="1623392377428" duration="34000" />
+      <workItem from="1623404362645" duration="8591000" />
+      <workItem from="1623419229525" duration="307000" />
+      <workItem from="1623419674369" duration="761000" />
+      <workItem from="1623420938764" duration="3079000" />
+      <workItem from="1623424111549" duration="3666000" />
+      <workItem from="1623435103441" duration="7592000" />
+      <workItem from="1623443620547" duration="339000" />
+      <workItem from="1623443990635" duration="3879000" />
+      <workItem from="1623484136787" duration="3000" />
+      <workItem from="1623486854354" duration="8688000" />
+      <workItem from="1623497077674" duration="5474000" />
+      <workItem from="1623502652266" duration="7916000" />
+      <workItem from="1623511097168" duration="3515000" />
+      <workItem from="1623514764659" duration="1435000" />
+      <workItem from="1623517495043" duration="6293000" />
+      <workItem from="1623523869104" duration="5396000" />
+      <workItem from="1623576743775" duration="51000" />
+      <workItem from="1623578239552" duration="8395000" />
+      <workItem from="1623601750459" duration="1192000" />
+      <workItem from="1623607983158" duration="3937000" />
+      <workItem from="1623616088292" duration="61000" />
+      <workItem from="1623616312355" duration="2111000" />
+      <workItem from="1623622820853" duration="1902000" />
+      <workItem from="1623651863168" duration="7251000" />
+      <workItem from="1623670096784" duration="1947000" />
+      <workItem from="1623687533385" duration="2864000" />
+      <workItem from="1623697088723" duration="3647000" />
+      <workItem from="1623703057956" duration="3883000" />
+      <workItem from="1623743182259" duration="6985000" />
+      <workItem from="1623764897696" duration="435000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/client" />
+    </ignored-roots>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="676" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1623699464648">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="676" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1623699464648" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1622571648961">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1622571648961" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1623765335077">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1623765335077" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1622576826795">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1622576826795" />
+    <state x="941" y="836" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1622549415523">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="941" y="836" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1622549415523" />
+    <state x="557" y="361" key="search.everywhere.popup" timestamp="1622988792038">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="557" y="361" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1622988792038" />
+  </component>
+</project>

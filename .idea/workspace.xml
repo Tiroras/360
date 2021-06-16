@@ -12,24 +12,8 @@
   <component name="ChangeListManager">
     <list default="true" id="85f53fa6-f49a-41b2-9667-1976af4feff6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/add-interviewers/polls/list/SelectPollList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/add-interviewers/polls/list/SelectPollList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/add-interviewers/polls/list/SelectPollListItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/add-interviewers/polls/list/SelectPollListItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/add-interviewers/users/SelectInterviewers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/add-interviewers/users/SelectInterviewers.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/add-interviewers/users/SelectInterviewersItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/add-interviewers/users/SelectInterviewersItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/add-poll/user-list/UserList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/add-poll/user-list/UserList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/add-poll/user-list/UserListItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/add-poll/user-list/UserListItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/polls/Polls.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/polls/Polls.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/polls/poll/Poll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/polls/poll/Poll.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/users/User.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/users/User.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/admin/users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/admin/users/Users.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/content/Contents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/content/Contents.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/content/profile/profile/info/Info.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/content/profile/profile/info/Info.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.ts" beforeDir="false" afterPath="$PROJECT_DIR$/db.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +44,7 @@
       <recent name="E:\Programs-Work\360server" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Programs-Work\360server\client\src\components\header\nav" />
       <recent name="E:\Programs-Work\360server\client\src\components\content\profile\profile" />
       <recent name="E:\Programs-Work\360server\client\src\components\content\router" />
       <recent name="E:\Programs-Work\360server\client\src\components\content" />
@@ -151,7 +136,9 @@
       <workItem from="1623765339952" duration="1400000" />
       <workItem from="1623772216550" duration="973000" />
       <workItem from="1623773501300" duration="2910000" />
-      <workItem from="1623778444729" duration="623000" />
+      <workItem from="1623778444729" duration="1769000" />
+      <workItem from="1623837368743" duration="4186000" />
+      <workItem from="1623846361842" duration="10487000" />
     </task>
     <servers />
   </component>

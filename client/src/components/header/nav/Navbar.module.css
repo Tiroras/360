@@ -1,9 +1,32 @@
+@media screen and (max-width: 1080px){
+    .navbar{
+        display: none;
+    }
+    .collapse{
+        display: block;
+    }
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .collapse{
+        display: none;
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
 .navbar{
     font-size: 18px;;
-    padding: 1vh 10vw;
-    display: flex;
-    justify-content: space-between;
+    padding: 1vh 10vw 1vh 2vw;
 }
+
 
 .usernav{
     display: flex;
@@ -11,4 +34,8 @@
 
 .profile{
     display: flex;
+}
+
+.brand{
+    margin-left: 10vw;
 }

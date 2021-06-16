@@ -10,41 +10,41 @@ const CompetenceMainPage = () => {
         Для получения оценки окружение её цели должны пройти опрос, ответив на ряд вопросов. Ответ на каждый из этих вопросов даст вам оценку по той, или иной компетенции.
       </ListGroupItem>
       <ListGroupItem className={`bg-success text-white ${classes.list}`}>
-        <div className={"s34 bold"}>
+        <div className={"bold"}>
           Список компетенций:
         </div>
         <div className={`${classes.list_competences}`}>
-          <div className={"s28"}>
+          <div>
             Клиентоориентированность
           </div>
-          <div className={"s28"}>
+          <div>
             Лояльность
           </div>
-          <div className={"s28"}>
+          <div>
             Инициативность
           </div>
-          <div className={"s28"}>
+          <div>
             Адаптивность
           </div>
-          <div className={"s28"}>
+          <div>
             Самостоятельность
           </div>
-          <div className={"s28"}>
+          <div>
             Стрессоустойчивость
           </div>
-          <div className={"s28"}>
+          <div>
             Стремление к общению
           </div>
-          <div className={"s28"}>
+          <div>
             Управление командой
           </div>
-          <div className={"s28"}>
+          <div>
             Планирование
           </div>
-          <div className={"s28"}>
+          <div>
             Обучение
           </div>
-          <div className={"s28"}>
+          <div>
             Мотивирование
           </div>
         </div>

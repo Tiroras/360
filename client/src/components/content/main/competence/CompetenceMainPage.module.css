@@ -1,12 +1,29 @@
+@media screen and (min-width: 1080px) {
+    .text{
+        width: 50%;
+    }
+    .list{
+        width: 50%;
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .list{
+        font-size: 22px;
+        width: 100%;
+    }
+}
+
 .competences{
     margin-top: 4vh;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .list{
     display: flex;
     flex-direction: column;
-    min-width: 50%;
-
 }
 
 .list_competences{

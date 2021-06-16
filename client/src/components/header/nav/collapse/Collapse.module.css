@@ -1,0 +1,25 @@
+.collapse_button{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 6px;
+}
+
+.button{
+    border-color: white;
+    border-width: 1px;
+}
+
+.span{
+    background-color: white;
+    width: 90%;
+}
+
+.admin{
+    border: none;
+}
+
+.collapse_nav{
+    display: flex;
+    flex-wrap: wrap;
+}
